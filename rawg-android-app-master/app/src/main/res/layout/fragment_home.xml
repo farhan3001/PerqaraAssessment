@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/homeMotionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_16sdp"
+        app:layoutDescription="@xml/motion_scene_fragment_home">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_16sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_16sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_64sdp"
+            android:background="@drawable/shape_home_searchview"
+            android:theme="@style/styleSearchView"
+            app:closeIcon="@drawable/ic_baseline_close_24"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/headerImage"
+            app:searchIcon="@drawable/ic_baseline_search_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/popularGamesButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_84sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:backgroundTint="@color/gray_normal"
+            android:drawableLeft="@drawable/ic_baseline_bar_chart_24"
+            android:text="@string/popular_in_2022"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            app:rippleColor="@color/button_ripple_color" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bestOfTheYearGamesButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_84sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:backgroundTint="@color/gray_normal"
+            android:drawableLeft="@drawable/ic_trophy"
+            android:text="@string/best_of_the_year"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            app:rippleColor="@color/button_ripple_color" />
+
+        <TextView
+            android:id="@+id/gamesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/impact"
+            android:text="@string/games"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/popularGamesButton" />
+
+        <FrameLayout
+            android:id="@+id/gradientLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foreground="@drawable/gradient_home_screen_selected_game"
+            android:translationZ="-20dp"
+            app:layout_constraintBottom_toBottomOf="@id/homeScreenGames"
+            app:layout_constraintEnd_toEndOf="@id/homeScreenGames"
+            app:layout_constraintStart_toStartOf="@id/homeScreenGames"
+            app:layout_constraintTop_toTopOf="@id/homeScreenGames">
+
+            <ImageView
+                android:id="@+id/selectedGameImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/homeScreenGames"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_216sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/gamesLabel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/seeMoreGamesButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_36sdp"
+            android:backgroundTint="@color/gray_normal"
+            android:outlineProvider="background"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:text="@string/see_more"
+            android:textColor="@color/gray_light"
+            app:cornerRadius="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/homeScreenGames"
+            app:rippleColor="@color/button_ripple_color"
+            app:strokeColor="@color/gray_soft"
+            app:strokeWidth="@dimen/_2sdp" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</ScrollView>

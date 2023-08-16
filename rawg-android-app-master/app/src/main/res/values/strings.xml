@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Perqara Assessment</string>
+    <string name="release_date">Release Date</string>
+    <string name="publisher">Publisher</string>
+    <string name="rating">Rating</string>
+    <string name="description">Description</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="see_more">See more</string>
+    <string name="best_of_the_year">Best of the year</string>
+    <string name="popular_in_2022">POPULAR IN 2022</string>
+    <string name="search">Search</string>
+    <string name="visit_website">VISIT WEBSITE</string>
+    <string name="rawg_description">The Largest\nVideo Game Database</string>
+    <string name="rawg">RAWG</string>
+    <string name="screenshots">Screenshots</string>
+    <string name="metascore">Metascore</string>
+    <string name="genre">Genre</string>
+    <string name="games">Games</string>
+
+    <!--  exceptions   -->
+    <string name="check_your_connection">Check your connection</string>
+    <string name="invalid_api_key">Invalid API key</string>
+    <string name="unexpected_error">Unexpected Error</string>
+    <string name="not_found">Not Found</string>
+    <string name="request_timeout">Request Timeout</string>
+    <string name="the_server_is_unreachable">The server is unreachable</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="bad_request">Bad Request</string>
+    <string name="exit">EXIT</string>
+    <string name="back">back</string>
+    <string name="retry">retry</string>
+    <string name="close">close</string>
+</resources>

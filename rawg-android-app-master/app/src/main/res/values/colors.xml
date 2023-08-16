@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red_soft">#E56161</color>
+    <color name="red_normal">#E04040</color>
+    <color name="red_dark">#AF1D1D</color>
+
+    <color name="white_dark">#CBCBCB</color>
+
+    <color name="gray_light">#5e5e5e</color>
+    <color name="gray_soft">#3D3D3D</color>
+    <color name="gray_normal">#202020</color>
+    <color name="gray_dark">#151515</color>
+
+    <color name="yellow_dark">#D2B401</color>
+    <color name="green_dark">#388E3C</color>
+
+    <color name="button_ripple_color">#A1A1A1</color>
+    <color name="retry_button_ripple_color">#5AD25A</color>
+</resources>
